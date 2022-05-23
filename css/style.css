@@ -1,6 +1,7 @@
 /* ne zelimo da browser dodaje neke svoje predefinisane vrednosti */
 /* border-box - borders i padding se vise ne dodaju na ukupnu visinu/sirinu nasih elemenata */
 /* prosirujemo i za pre/posle elemente */
+/*test*/
 *, *::after, *::before {
   margin: 0;
   padding: 0;
