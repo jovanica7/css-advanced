@@ -1,0 +1,18 @@
+/* ne zelimo da browser dodaje neke svoje predefinisane vrednosti */
+/* border-box - borders i padding se vise ne dodaju na ukupnu visinu/sirinu nasih elemenata */
+/* prosirujemo i za pre/posle elemente */
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    box-sizing: inherit;
+}
+
+html {
+    /* font-size: 10px; - 1rem is the root font size, hence, 1rem is now 10px */ 
+    font-size: 62.5% /* 10 podeljeno sa 16, jer je 16 defaultno za browser, kako bi korisnici mogli zumirati kako zele */
+}
+
+body {
+    box-sizing: border-box;
+}

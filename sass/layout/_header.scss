@@ -1,0 +1,41 @@
+/* u bilo kojoj tacki, 95% u odnosu na viewport visinu */
+/* top - ako zelimo da se na resize gornji deo slike ne menja */
+/* 0.8 opacity */
+/* clip - isecamo sliku u oblik koji zelimo */
+/* imamo i konkatenaciju sa & */
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom, rgba($color-primary-dark, 0.8), rgba($color-primary-light, 0.8)), url(../../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    position: relative;
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+}
+
+/* parent za logo je heder, tako da heder mora imati poziciju relative */
+.logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+/* sirina ce biti automatski izracunata od strane browsera */
+.logo {
+    height: 3.5rem;
+}
+
+/* -50% se odnosi na sam elemenat, pola duzine u levo i pola visine ka gore */
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
