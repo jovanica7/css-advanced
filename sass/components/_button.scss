@@ -26,7 +26,13 @@
 
 .btn-white {
     background-color: $color-white;
-    color: #777;
+    color: $color-grey-dark;
+
+}
+
+.btn-green {
+    background-color: $color-primary;
+    color: $color-white;
 
 }
 
@@ -48,6 +54,10 @@
 
 .btn-white::after {
     background-color: $color-white;
+}
+
+.btn-green::after {
+    background-color: $color-primary;
 }
 
 /* pseudo elemenat postaje vidljiv nakon sto smo uradili hover nad dugmetom */
