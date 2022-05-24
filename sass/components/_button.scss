@@ -1,15 +1,23 @@
 /* pseudo-klasa - stanje dugmeta u nekom momentu */
 /* inline block - ako zelimo da dodamo neki padding, neki prostor za element */
 /* transition mora da ide na inicijalno (link) stanje */
-.btn:link, .btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: all .2s;
-    position: relative;
-    font-size: $default-font-size;
+.btn {
+    &,
+    &:link, 
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: $default-font-size;
+
+        // promena zbog button elementa unutar forme
+        border: none;
+        cursor: pointer;
+    }
 }
 
 /* y osa ide od gore ka dole, zato moramo negativnu vrednost za pomeranje ka gore */
@@ -19,7 +27,9 @@
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
 }
 
-.btn:active {
+// outline none ne zelimo da uklonimo skroz, za focus deo
+.btn:active, .btn:focus {
+    outline: none;
     transform: translateY(-.1rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
 }
